@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="JSONParsingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYj-RL-IfH">
+                                <rect key="frame" x="81" y="266.5" width="158" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Показать пёселя"/>
+                                <connections>
+                                    <action selector="showDogButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEm-OD-PsN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5K-Gw-igC">
+                                <rect key="frame" x="40" y="70" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="FZ5-h5-8tm"/>
+                                    <constraint firstAttribute="width" constant="240" id="rRs-fT-EaU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-8g-8eA">
+                                <rect key="frame" x="150" y="124" width="20" height="20"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A2D-UJ-ABJ">
+                                <rect key="frame" x="16" y="358" width="288" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z5K-Gw-igC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0XV-UT-QsA"/>
+                            <constraint firstItem="yWp-8g-8eA" firstAttribute="centerY" secondItem="z5K-Gw-igC" secondAttribute="centerY" id="0gq-gD-5Bp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2D-UJ-ABJ" secondAttribute="trailing" constant="16" id="5ib-T8-xvq"/>
+                            <constraint firstItem="AYj-RL-IfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCL-qQ-Yjc"/>
+                            <constraint firstItem="AYj-RL-IfH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XDC-wi-OU9"/>
+                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aD3-Xk-byp"/>
+                            <constraint firstItem="yWp-8g-8eA" firstAttribute="centerX" secondItem="z5K-Gw-igC" secondAttribute="centerX" id="fWf-X1-T8H"/>
+                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n4m-Ia-avT"/>
+                            <constraint firstItem="z5K-Gw-igC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="oEf-Kc-C1U"/>
+                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="top" secondItem="AYj-RL-IfH" secondAttribute="bottom" constant="56.5" id="wN5-lO-BAk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="yWp-8g-8eA" id="JvC-cC-z0g"/>
+                        <outlet property="dogImageView" destination="z5K-Gw-igC" id="x0Z-eg-SBq"/>
+                        <outlet property="urlAddressLabel" destination="A2D-UJ-ABJ" id="Fxb-SY-6nz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
