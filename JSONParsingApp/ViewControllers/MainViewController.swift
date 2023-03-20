@@ -36,9 +36,8 @@ extension MainViewController {
                 let dog = try decoder.decode(Dog.self, from: data)
                 
                 print("Dog photo URL address: \(dog.message)\nStatus: " + dog.status.uppercased())
-                
-                let apiImage = dog.message.absoluteString
-                guard let apiURL = URL(string: apiImage) else { return }
+           
+                guard let apiURL = URL(string: dog.message.absoluteString) else { return }
                 let session = URLSession(configuration: .default)
                 let task = session.dataTask(with: apiURL) { [weak self] data, _, error in
                     guard let data else {
