@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="JSONParsingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYj-RL-IfH">
-                                <rect key="frame" x="81" y="266.5" width="158" height="35"/>
+                                <rect key="frame" x="128" y="430.5" width="158" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Показать пёселя"/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5K-Gw-igC">
-                                <rect key="frame" x="40" y="70" width="240" height="128"/>
+                                <rect key="frame" x="87" y="118" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="FZ5-h5-8tm"/>
                                     <constraint firstAttribute="width" constant="240" id="rRs-fT-EaU"/>
@@ -37,13 +37,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-8g-8eA">
-                                <rect key="frame" x="150" y="124" width="20" height="20"/>
+                                <rect key="frame" x="197" y="172" width="20" height="20"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A2D-UJ-ABJ">
-                                <rect key="frame" x="16" y="358" width="288" height="0.0"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A2D-UJ-ABJ">
+                                <rect key="frame" x="16" y="522" width="382" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,14 +54,13 @@
                         <constraints>
                             <constraint firstItem="z5K-Gw-igC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0XV-UT-QsA"/>
                             <constraint firstItem="yWp-8g-8eA" firstAttribute="centerY" secondItem="z5K-Gw-igC" secondAttribute="centerY" id="0gq-gD-5Bp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2D-UJ-ABJ" secondAttribute="trailing" constant="16" id="5ib-T8-xvq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2D-UJ-ABJ" secondAttribute="trailing" constant="16" id="CMn-a7-QTY"/>
                             <constraint firstItem="AYj-RL-IfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCL-qQ-Yjc"/>
+                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="top" secondItem="AYj-RL-IfH" secondAttribute="bottom" constant="56.5" id="NWv-Ph-h0f"/>
                             <constraint firstItem="AYj-RL-IfH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XDC-wi-OU9"/>
-                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aD3-Xk-byp"/>
                             <constraint firstItem="yWp-8g-8eA" firstAttribute="centerX" secondItem="z5K-Gw-igC" secondAttribute="centerX" id="fWf-X1-T8H"/>
-                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n4m-Ia-avT"/>
+                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hzi-sl-Lga"/>
                             <constraint firstItem="z5K-Gw-igC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="oEf-Kc-C1U"/>
-                            <constraint firstItem="A2D-UJ-ABJ" firstAttribute="top" secondItem="AYj-RL-IfH" secondAttribute="bottom" constant="56.5" id="wN5-lO-BAk"/>
                         </constraints>
                     </view>
                     <connections>
