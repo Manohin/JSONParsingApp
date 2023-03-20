@@ -23,6 +23,8 @@ final class MainViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
+
 extension MainViewController {
     private func fetchDog() {
         guard let url = URL(string: Link.dog.rawValue) else { return }
