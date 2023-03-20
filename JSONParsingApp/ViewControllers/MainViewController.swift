@@ -13,6 +13,10 @@ final class MainViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var urlAddressLabel: UILabel!
     
+    enum Link: String {
+        case dog = "https://dog.ceo/api/breeds/image/random"
+    }
+    
     @IBAction func showDogButtonTapped() {
         activityIndicator.startAnimating()
         fetchDog()
@@ -21,7 +25,7 @@ final class MainViewController: UIViewController {
 
 extension MainViewController {
     private func fetchDog() {
-        guard let url = URL(string: "https://dog.ceo/api/breeds/image/random") else { return }
+        guard let url = URL(string: Link.dog.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data, let response else {
