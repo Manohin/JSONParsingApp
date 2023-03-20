@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     @IBOutlet var dogImageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -56,7 +56,6 @@ extension MainViewController {
                         \(dog.message.absoluteString)
                         """
                     }
-                   
                     print("Dog is showed")
                 }
                 task.resume()
